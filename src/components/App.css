@@ -8,11 +8,15 @@
   will-change: filter;
   transition: filter 300ms;
 }
+.catDiv {
+  margin-left: 5%;
+}
 .catDiv:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #7feb5baa);
 }
 .catDiv img {
-  width: 30%;
+  height: 15rem;
+  width: auto;
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
