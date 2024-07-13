@@ -21,7 +21,7 @@ function CatImg() {
   return (
     <>
       <div className="catDiv">
-        <h2>Cat of the day</h2>
+        <h3>Cat of the day</h3>
         <img src={catImg} alt="funny cat" />
       </div>
     </>
