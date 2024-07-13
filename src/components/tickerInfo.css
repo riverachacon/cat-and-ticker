@@ -1,0 +1,16 @@
+.ticker-input {
+  margin-left: 38%;
+}
+.ticker-input h2 {
+  font-size: 2.2rem;
+}
+.ticker-input input {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  border-color: #8ecae6;
+}
+button {
+  margin-left: 4%;
+}
+.ticker-input form input {
+  margin-right: 5%;
+}
