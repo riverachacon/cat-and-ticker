@@ -6,16 +6,22 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 function TickerInfo(props) {
   const [ticker, setTicker] = useState("");
+  const [date, setDate] = useState(null);
 
   function handleInput(e) {
     const { value } = e.target; // name (name of input) or value (input of user)
     // console.log(value);
     setTicker(value);
   }
+  function handleDate(date) {
+    // console.log(date);
+    setDate(date);
+  }
   function handleSubmit(e) {
     props.onSearchTicker(ticker);
-    // console.log(ticker);
-    e.preventDefault();
+    console.log(ticker);
+    props.onDateSelected(date);
+    e.preventDefault(); // for page not to reload when submitting info
     setTicker(""); // clear input
   }
 
@@ -24,7 +30,6 @@ function TickerInfo(props) {
       <div className="ticker-input">
         <h2>Search your favorite stock</h2>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          {" "}
           <form onSubmit={handleSubmit}>
             <input
               value={ticker}
@@ -35,8 +40,11 @@ function TickerInfo(props) {
               onChange={handleInput}
             />
             <DatePicker
-              label={'"month", "day" and "year"'}
+              label={"Select date"}
               views={["year", "month", "day"]}
+              format="MM/dd/yyyy"
+              value={date}
+              onChange={handleDate}
             />
             <button type="submit">Search</button>
           </form>
