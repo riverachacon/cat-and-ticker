@@ -41,8 +41,6 @@ function TickerInfo(props) {
             />
             <DatePicker
               label={"Select date"}
-              views={["year", "month", "day"]}
-              format="MM/dd/yyyy"
               value={date}
               onChange={handleDate}
             />
