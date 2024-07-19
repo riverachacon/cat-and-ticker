@@ -8,10 +8,10 @@ function App() {
   const [ticker, setTicker] = useState("");
   const [date, setDate] = useState("");
 
-  useEffect(() => {
-    console.log(ticker); // log current ticker
-    console.log(date);
-  }, [ticker, date]);
+  // useEffect(() => {
+  //   // console.log(ticker); // log current ticker
+  //   // console.log(date);
+  // }, [ticker, date]);
 
   function searchTicker(newTicker) {
     setTicker(newTicker);

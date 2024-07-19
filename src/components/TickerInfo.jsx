@@ -19,7 +19,7 @@ function TickerInfo(props) {
   }
   function handleSubmit(e) {
     props.onSearchTicker(ticker);
-    console.log(ticker);
+    // console.log(ticker);
     props.onDateSelected(date);
     e.preventDefault(); // for page not to reload when submitting info
     setTicker(""); // clear input
