@@ -21,6 +21,13 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.ticker-data {
+  display: flex;
+  justify-content: center;
+}
+.news-image {
+  width: 27%;
+}
 
 @keyframes logo-spin {
   from {
