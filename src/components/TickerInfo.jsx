@@ -43,6 +43,26 @@ function TickerInfo(props) {
               label={"Select date"}
               value={date}
               onChange={handleDate}
+              sx={{
+                "& .MuiInputBase-root": {
+                  color: "#EEE2DE", // Change text color
+                  borderColor: "blue", // Change border color
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#8ecae6", // Change border color of the fieldset
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#9BEC00", // Change border color on hover
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#8ecae6", // Change border color when focused
+                  },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#EEE2DE", // Change label color
+                },
+              }}
             />
             <button type="submit">Search</button>
           </form>
