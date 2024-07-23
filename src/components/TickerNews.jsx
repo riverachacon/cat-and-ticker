@@ -52,24 +52,29 @@ function TickerNews(props) {
 
   return (
     <div className="ticker-info">
-      <h3>Details for: {date}</h3>
-      <ul>
-        <li>Open market price: {data.open}</li>
-        <li>High of the day: {data.high}</li>
-        <li>Low of the day: {data.low}</li>
-        <li>Closing price: {data.close}</li>
-        <li>Volume: {data.volume}</li>
-      </ul>
+      <div className="ticker-data">
+        <h3>Details for: {date}</h3>
+        <ul>
+          <li>Open market price: {data.open}</li>
+          <li>High of the day: {data.high}</li>
+          <li>Low of the day: {data.low}</li>
+          <li>Closing price: {data.close}</li>
+          <li>Volume: {data.volume}</li>
+        </ul>
+      </div>
+
       <h2>Latest News</h2>
       {news.map((i) => {
         return (
           <div className="ticker-news" key={i.id}>
             <h4>{i.title}</h4>
-            <a href={i.article_url}>
-              <img src={i.image_url} alt="news image" />
+            <a href={i.article_url} target="_blank" rel="noopener noreferrer">
+              <img src={i.image_url} className="news-image" alt="news image" />
             </a>
             <p>{i.description}</p>
-            <a href={i.article_url}>More</a>
+            <a href={i.article_url} target="_blank" rel="noopener noreferrer">
+              More
+            </a>
           </div>
         );
       })}
