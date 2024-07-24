@@ -10,6 +10,7 @@ function TickerNews(props) {
   const apiKey = "LHfg34zjuYdLNNX2bSFxh3K96vPeDLWy";
   const ticker = props.onTicker.toUpperCase();
   const date = props.onDate;
+  const chartLink = `https://www.tradingview.com/chart/?symbol=%3A${ticker}`;
 
   useEffect(() => {
     if (ticker && date) {
@@ -62,6 +63,12 @@ function TickerNews(props) {
           <li>Volume: {data.volume}</li>
         </ul>
       </div>
+      <div className="chartLink">
+        <a style={{ fontSize: "2.5rem" }} class="chart" href={chartLink}>
+          Live chart
+        </a>
+      </div>
+
       <h2 style={{ fontSize: "3rem", textAlign: "center" }}>Latest News</h2>
       <div className="tickerNews-container">
         {news.map((i) => {
