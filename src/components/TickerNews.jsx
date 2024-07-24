@@ -62,22 +62,27 @@ function TickerNews(props) {
           <li>Volume: {data.volume}</li>
         </ul>
       </div>
-
-      <h2>Latest News</h2>
-      {news.map((i) => {
-        return (
-          <div className="ticker-news" key={i.id}>
-            <h4>{i.title}</h4>
-            <a href={i.article_url} target="_blank" rel="noopener noreferrer">
-              <img src={i.image_url} className="news-image" alt="news image" />
-            </a>
-            <p>{i.description}</p>
-            <a href={i.article_url} target="_blank" rel="noopener noreferrer">
-              More
-            </a>
-          </div>
-        );
-      })}
+      <h2 style={{ fontSize: "3rem", textAlign: "center" }}>Latest News</h2>
+      <div className="tickerNews-container">
+        {news.map((i) => {
+          return (
+            <div className="ticker-news" key={i.id}>
+              <h4 style={{ fontWeight: "800" }}>{i.title}</h4>
+              <a href={i.article_url} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={i.image_url}
+                  className="news-image"
+                  alt="news image"
+                />
+              </a>
+              <p>{i.description}</p>
+              <a href={i.article_url} target="_blank" rel="noopener noreferrer">
+                More
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

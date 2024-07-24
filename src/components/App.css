@@ -26,9 +26,16 @@
   justify-content: center;
 }
 .news-image {
-  width: 27%;
+  width: 68%;
 }
-
+.tickerNews-container {
+  display: flex;
+  width: 100vw;
+}
+.ticker-news {
+  padding-left: 5%;
+  width: 459px;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
