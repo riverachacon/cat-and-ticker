@@ -64,7 +64,13 @@ function TickerNews(props) {
         </ul>
       </div>
       <div className="chartLink">
-        <a style={{ fontSize: "2.5rem" }} className="chart" href={chartLink}>
+        <a
+          style={{ fontSize: "2.5rem" }}
+          className="chart"
+          href={chartLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Live chart
         </a>
       </div>
