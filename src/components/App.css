@@ -25,16 +25,36 @@
   display: flex;
   justify-content: center;
 }
+.chartLink {
+  display: flex;
+  justify-content: center;
+}
+@keyframes colorChange {
+  0% {
+    color: #5398ed;
+  }
+  50% {
+    color: #444cf6;
+  }
+  100% {
+    color: #646cff;
+  }
+}
+
+.chart {
+  animation: colorChange 3.5s infinite;
+  position: relative;
+}
 .news-image {
   width: 68%;
 }
 .tickerNews-container {
   display: flex;
   width: 100vw;
+  justify-content: space-between;
 }
 .ticker-news {
-  padding-left: 5%;
-  width: 459px;
+  padding-left: 20px;
 }
 @keyframes logo-spin {
   from {
@@ -43,9 +63,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-h2 {
-  /* animation: logo-spin infinite 20s linear; */
 }
 
 @media (prefers-reduced-motion: no-preference) {

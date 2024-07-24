@@ -64,7 +64,7 @@ function TickerNews(props) {
         </ul>
       </div>
       <div className="chartLink">
-        <a style={{ fontSize: "2.5rem" }} class="chart" href={chartLink}>
+        <a style={{ fontSize: "2.5rem" }} className="chart" href={chartLink}>
           Live chart
         </a>
       </div>
@@ -82,7 +82,7 @@ function TickerNews(props) {
                   alt="news image"
                 />
               </a>
-              <p>{i.description}</p>
+              <p style={{ width: "75%" }}>{i.description}</p>
               <a href={i.article_url} target="_blank" rel="noopener noreferrer">
                 More
               </a>
