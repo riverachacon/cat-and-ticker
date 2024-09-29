@@ -7,7 +7,7 @@ function TickerNews(props) {
   const [error, setError] = useState(null);
   const [news, setNews] = useState(null);
 
-  const apiKey = "LHfg34zjuYdLNNX2bSFxh3K96vPeDLWy";
+  const apiKey = "qbzZHRmwbfhcv8UZVoZNfQvI6KRlsLsy";
   const ticker = props.onTicker.toUpperCase();
   const date = props.onDate;
   const chartLink = `https://www.tradingview.com/chart/?symbol=%3A${ticker}`;
@@ -28,6 +28,8 @@ function TickerNews(props) {
           setSearch(false);
           console.log(ticker, date);
         } catch (err) {
+          console.log(err);
+
           setError(err);
           setSearch(false);
         }
@@ -48,7 +50,7 @@ function TickerNews(props) {
   }
 
   if (error) {
-    return <div>Error fetching news API: {error.message}</div>;
+    return <div>Error fetching API: {error.message}</div>;
   }
 
   return (
